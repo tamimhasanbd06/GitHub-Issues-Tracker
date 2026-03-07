@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- DaisyUI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+
+    <!-- Tailwind -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="icon" href="./assets/github-logo.png">
+
+    <title>GitHub Issues Tracker</title>
+
+
+<style>
+    button{
+        cursor: pointer;
+    }
+</style>
+
+</head>
+
+<body class="">
+
+    <!-- HEADER -->
+    <header class="bg-gray-200 max-w-[1600px] mx-auto">
+
+        <nav class="max-w-[1600px] mx-auto px-6 py-2 flex items-center justify-between">
+
+            <!-- Left: Logo + Title -->
+            <div class="flex items-center gap-2">
+                <img class="w-6" src="./assets/github-logo.png" alt="">
+                <h2 class="font-semibold">GitHub Issues Tracker</h2>
+            </div>
+
+            <!-- Right Side -->
+            <div class="flex items-center gap-3">
+
+                <!-- Search -->
+                <div class="relative">
+                    <i class="fa-solid fa-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"></i>
+                    <input type="text" id="search-input" placeholder="Search issues..."
+                        class="pl-9 pr-4 py-1.5 border rounded-md w-[260px] text-sm focus:outline-none focus:border-gray-400" />
+                </div>
+
+                <!-- New Issue Button -->
+                <button id="new-issue-btn" type="button"
+                    class="btn btn-sm bg-purple-600 text-white hover:bg-purple-700 border-none">
+                    + New Issue
+                </button>
+
+            </div>
+
+        </nav>
+    </header>
+
+
+    <main class="max-w-[1600px] mx-auto ">
+      <section class="max-w-11/12 h-[88px] p-6 mt-20 bg-gray-200 mx-auto">
+    <button id="all" class="py-1 px-8 text-white rounded-xl mx-1 bg-blue-600">All</button>
+    <button id="open" class="py-1 px-8 rounded-xl mx-1 border">Open</button>
+    <button id="close" class="py-1 px-8 rounded-xl mx-1 border">Closed</button>
+</section>
+
+
+        <section class="bg-gray-200 max-w-11/12 p-6 mt-6 flex justify-between mx-auto">
+            <div class="flex items-center">
+                <div class="w-[50px] h-[50px] rounded-full bg-[#DBEAFE] items-center justify-center flex">
+                    <img src="./assets/Aperture.png" alt="">
+                </div>
+
+                <div>
+                    <h2 class="font-bold"><span id=" Total-issue">50 </span>Issues</h2>
+                    <p>Track and manage your project issues</p>
+                </div>
+            </div>
+
+
+            <div class="flex">
+                <div class="flex items-center gap-2 font-bold m-1">
+                    <div>
+                        <div class="w-3 h-3 rounded-full bg-[#00A96E]"></div>
+                    </div>
+                    <div>
+                        <p>Open</p>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-2 font-bold m-1">
+                    <div>
+                        <div class="w-3 h-3 rounded-full bg-[#A855F7]"></div>
+                    </div>
+                    <div>
+                        <p>Closed</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+     <section id="All-issues" class="flex flex-wrap gap-5 mt-3 max-w-11/12 p-6 mx-auto justify-center">
+
+    
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <script src="./js/gitHoub-Dashboard.js"></script>
+    </main>
+
+</body>
+
+</html>
