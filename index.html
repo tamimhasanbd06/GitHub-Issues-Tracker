@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="icon" href="./assets/github-logo.png">
+    <link rel="stylesheet" href="./style/style.css">
+    <title>GitHub Issues Tracker</title>
+</head>
+
+<body class="bg-gray-200 flex items-center justify-center min-h-screen">
+
+    <section class="bg-white w-[520px] rounded-xl shadow-lg p-8 text-center">
+
+        <!-- Logo -->
+        <div class="flex justify-center mb-4">
+            <div class=" w-16 h-16 rounded-full flex items-center justify-center text-white text-3xl">
+                <img class="text-white" src="./assets/github-logo.png" alt="">
+            </div>
+        </div>
+
+        <!-- Title -->
+        <h1 class="text-xl font-semibold text-gray-800">
+            GitHub Issues Tracker
+        </h1>
+        <p class="text-gray-500 text-sm mb-6">
+            Sign in to manage your issues
+        </p>
+
+        <!-- Username -->
+        <div class="text-left mb-4">
+            <label class="text-sm text-gray-700">Username</label>
+            <input id="username" type="text" placeholder="Enter Username"
+                class="w-full mt-1 p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500">
+
+            <p class="text-xs text-blue-500 mt-1">
+                Default: admin
+            </p>
+        </div>
+
+        <!-- Password -->
+        <div class="text-left mb-5">
+            <label class="text-sm text-gray-700">Password</label>
+            <input id="password" type="password" placeholder="Enter Password"
+                class="w-full mt-1 p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500">
+
+            <p class="text-xs text-blue-500 mt-1">
+                Default: admin123
+            </p>
+        </div>
+
+        <!-- Sign In Button -->
+        <button id="signInButton" class="w-full py-2 rounded-md text-white font-medium
+            bg-gradient-to-r from-purple-600 to-indigo-600
+            hover:opacity-90 transition"> Sign In
+        </button>
+
+        <!-- OR Divider -->
+        <div class="flex items-center my-5">
+            <hr class="flex-grow border-gray-300">
+            <span class="px-3 text-gray-400 text-sm">OR</span>
+            <hr class="flex-grow border-gray-300">
+        </div>
+
+        <!-- Demo Credentials -->
+        <div class="bg-gray-100 rounded-lg p-4 text-sm text-gray-700">
+            <p class="text-gray-500 mb-2">Demo Credentials:</p>
+            <p><strong>Username:</strong> admin</p>
+            <p><strong>Password:</strong> admin123</p>
+        </div>
+
+    </section>
+
+    <script src="./js/github-signin.js"></script>
+</body>
+
+</html>
