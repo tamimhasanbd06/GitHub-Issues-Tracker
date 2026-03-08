@@ -1,4 +1,4 @@
-const allIssues = document.getElementById('All-issues');
+ const allIssues = document.getElementById('All-issues');
 const totalIssue = document.getElementById('Total-issue');
 const searchInput = document.getElementById('search-input');
 const spinner = document.getElementById('spinner');
@@ -17,7 +17,7 @@ async function LoadIssues() {
         if (!res.ok) throw new Error("Failed to fetch issues");
 
         const result = await res.json();
-console.log(result,"apiData")
+        console.log(result, "apiData")
         issuesData = result.data;
 
         IssuesCarts(issuesData);
@@ -43,7 +43,7 @@ function IssuesCarts(data) {
     allIssues.innerHTML = '';
 
     data.forEach(issue => {
-console.log(issue,"issue")
+        console.log(issue, "issue")
         const status = issue.status.toLowerCase();
 
         const topBorderColor =
@@ -154,7 +154,11 @@ function ButtonClasses() {
     const buttons = document.querySelectorAll('section button');
 
     buttons.forEach(btn => {
+
         btn.classList.remove('bg-blue-600', 'text-white');
+
+        btn.classList.add('bg-transparent', 'border', 'border-gray-300', 'text-gray-700');
+
     });
 
 }
@@ -165,7 +169,10 @@ function ButtonEvents() {
 
         ButtonClasses();
 
-        document.getElementById('all').classList.add('bg-blue-600', 'text-white');
+        const btn = document.getElementById('all');
+
+        btn.classList.remove('bg-transparent', 'border', 'border-gray-900', 'text-gray-700');
+        btn.classList.add('bg-blue-600', 'text-white');
 
         IssuesCarts(issuesData);
 
@@ -175,7 +182,10 @@ function ButtonEvents() {
 
         ButtonClasses();
 
-        document.getElementById('open').classList.add('bg-blue-600', 'text-white');
+        const btn = document.getElementById('open');
+
+        btn.classList.remove('bg-transparent', 'border', 'border-gray-300', 'text-gray-700');
+        btn.classList.add('bg-blue-600', 'text-white');
 
         IssuesCarts(
             issuesData.filter(issue => issue.status.toLowerCase() === 'open')
@@ -187,7 +197,10 @@ function ButtonEvents() {
 
         ButtonClasses();
 
-        document.getElementById('close').classList.add('bg-blue-600', 'text-white');
+        const btn = document.getElementById('close');
+
+        btn.classList.remove('bg-transparent', 'border', 'border-gray-300', 'text-gray-700');
+        btn.classList.add('bg-blue-600', 'text-white');
 
         IssuesCarts(
             issuesData.filter(issue => issue.status.toLowerCase() === 'closed')
