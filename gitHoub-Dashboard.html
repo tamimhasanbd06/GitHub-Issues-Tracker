@@ -4,33 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- DaisyUI -->
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" />
-
-    <!-- Tailwind -->
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
-
-    <link rel="stylesheet" href="./style/style.css">
-    <link rel="icon" href="./assets/github-logo.png">
-
     <title>GitHub Issues Tracker</title>
 
+
+    <link rel="icon" href="./assets/github-logo.png">
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
     <style>
         button {
             cursor: pointer;
         }
     </style>
-
 </head>
+
 
 <body class="bg-gray-100 w-full">
 
     <!-- HEADER -->
-    <header class="bg-gray-200  mx-auto">
+    <header class="bg-gray-200  mx-auto ">
 
         <nav class="w-full mx-auto px-6 py-2 flex items-center justify-between">
 
@@ -116,7 +110,8 @@
 
     <!-- ISSUE DETAILS MODAL -->
 
-    <dialog id="Issues_model" class="modal">
+ <section>
+       <dialog id="Issues_model" class="modal">
         <div class="modal-box max-w-xl p-0 rounded-lg overflow-hidden">
             <div class="px-6 pt-5 pb-3 border-b border-gray-200">
                 <div class="flex items-center gap-3">
@@ -143,7 +138,7 @@
 
             <div class="px-6 py-4">
 
-                <div id="modal-labels" class="flex gap-2 mb-3">
+                <div id="modal-labels" class="flex gap-2 mb-3 ">
                 </div>
 
                 <p id="modal-description" class="text-sm text-gray-500 leading-relaxed">
@@ -170,6 +165,7 @@
 
                         <span id="modal-priority"
                             class="text-[11px] px-3 py-[3px] rounded-full text-white font-semibold">
+                            
                         </span>
                     </div>
                 </div>
@@ -189,6 +185,12 @@
 
     </dialog>
 
+ </section>
+
+    <!-- Loading spinner -->
+  <div id="spinner" class="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+    <span class="loading loading-dots loading-lg"></span>
+</div>
     <!-- JAVASCRIPT -->
 
     <script src="./js/gitHoub-Dashboard.js"></script>
