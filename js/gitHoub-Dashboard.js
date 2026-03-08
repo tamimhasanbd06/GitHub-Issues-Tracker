@@ -17,7 +17,7 @@ async function LoadIssues() {
         if (!res.ok) throw new Error("Failed to fetch issues");
 
         const result = await res.json();
-
+console.log(result,"apiData")
         issuesData = result.data;
 
         IssuesCarts(issuesData);
@@ -43,7 +43,7 @@ function IssuesCarts(data) {
     allIssues.innerHTML = '';
 
     data.forEach(issue => {
-
+console.log(issue,"issue")
         const status = issue.status.toLowerCase();
 
         const topBorderColor =
@@ -59,10 +59,10 @@ function IssuesCarts(data) {
         const card = document.createElement('div');
 
         card.className =
-            "w-[290px] bg-white border border-gray-200 rounded-lg shadow-sm overflow-hidden font-sans flex flex-col cursor-pointer";
+            "w-[290px] bg-white border border-gray-200 rounded-lg shadow-sm overflow-hidden font-sans flex flex-col cursor-pointer ";
 
         card.innerHTML = `
-            <div class="h-[3px] ${topBorderColor}"></div>
+            <div class="h-[3px]  ${topBorderColor}"></div>
 
             <div class="p-4 flex-1">
 
